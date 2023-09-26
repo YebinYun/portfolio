@@ -70,12 +70,14 @@ a {
   position: relative;
   background: white;
   border-radius: 5px;
+   box-shadow:inset 1px 1px 1px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
   z-index: 1;
   display: flex;
   align-items: center;
   padding: 8px 20px;
   margin: 0 20px;
-  box-shadow:;
 }
 .buttonHover:after {
   position: absolute;
@@ -90,7 +92,7 @@ a {
    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .buttonHover:hover {
   color: #fff;
@@ -101,4 +103,18 @@ a {
 }
 .buttonHover:active {
   top: 2px;
+}
+
+@keyframes arrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.animate-arrow {
+  animation: arrow 1.0s linear;
+  animation-iteration-count: infinite;
 }
