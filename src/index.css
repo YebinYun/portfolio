@@ -119,3 +119,9 @@ a {
   animation: arrow 1.0s linear;
   animation-iteration-count: infinite;
 }
+
+/* 스와이퍼 이미지 조정 */
+.mySwiper .swiper-slide{
+    width: 600px;
+    height: 400px;
+}

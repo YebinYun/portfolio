@@ -15,7 +15,7 @@ const Main = () => {
             <span>윤예빈입니다.</span>
           </div>
 
-          <div className="w-full border-2 border-white my-16" />
+          <div className="w-full border-2 border-white my-16 opacity-50 rounded-full" />
 
           <span className="pb-16 text-2xl text-white font-bold">
             방문해주셔서 감사합니다.
