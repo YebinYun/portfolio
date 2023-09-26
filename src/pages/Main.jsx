@@ -25,11 +25,13 @@ const Main = () => {
         {/* 사이트버튼 */}
         <ButtonWrap />
         {/* 화살표버튼 */}
-        <Icon
-          className={`w-16 h-16 text-gray-600 ${`animate-arrow`}`}
-          icon="iconamoon:arrow-up-2"
-          rotate={2}
-        />
+        <button className=" relative -bottom-20">
+          <Icon
+            className={`w-16 h-16 text-white ${`animate-arrow`} `}
+            icon="iconamoon:arrow-up-2"
+            rotate={2}
+          />
+        </button>
       </Background>
     );
 };
