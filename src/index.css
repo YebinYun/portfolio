@@ -105,6 +105,7 @@ a {
   top: 2px;
 }
 
+/* 화살표 버튼 에니메이션 */
 @keyframes arrow {
   0%, 100% {
     transform: translateY(0);
