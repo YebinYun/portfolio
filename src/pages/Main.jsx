@@ -1,11 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
 import Intro from '../main/Intro';
 import Project from '../main/Project';
+import Stack from "../main/Stack";
 
 const Main = () => {
   const sections = [
     { id: "intro", component: <Intro /> },
     { id: "project", component: <Project /> },
+    { id: "stack", component: <Stack /> },
   ];
   // 현재 스크롤 중인지 여부를 나타내는 상태
   const [isScrolling, setIsScrolling] = useState(false);
