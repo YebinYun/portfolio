@@ -121,7 +121,16 @@ a {
 }
 
 /* 스와이퍼 이미지 조정 */
-.mySwiper .swiper-slide{
-    width: 600px;
-    height: 400px;
+.mySwiper {
+  width: 1000px;
 }
+
+.mySwiper .swiper-slide{
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+}
+.mySwiper .swiper-slide img{
+    border-radius: 5px;
+}
+

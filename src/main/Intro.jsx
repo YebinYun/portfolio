@@ -4,7 +4,7 @@ import Background from '../components/common/Background';
 import ButtonWrap from '../components/button/ButtonWrap';
 
 
-const Main = () => {
+const Intro = () => {
     return (
       <Background>
         {/* 인사 문구 */}
@@ -39,4 +39,4 @@ const Main = () => {
     );
 };
 
-export default Main;
+export default Intro;
