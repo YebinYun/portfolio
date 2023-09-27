@@ -41,14 +41,24 @@ const Main = () => {
   }
 
   // 지정된 섹션으로 스크롤하는 함수
-  function scrollToSection() {
-    const sectionId = sections[index.current].id;
+  function scrollToSection(targetIndex = index.current) {
+    index.current = targetIndex;
+    const sectionId = sections[targetIndex].id;
     window.scrollTo({
       top:
         document.getElementById(sectionId).getBoundingClientRect().top +
         window.scrollY,
       behavior: "smooth",
     });
+  }
+
+  //버튼 이동 함수
+  function nextClick() {
+    if (index.current < sections.length - 1) {
+      scrollToSection(index.current + 1);
+    } else {
+         scrollToSection(0);
+      } 
   }
 
   // 마운트될 때 wheel 이벤트 리스너를 추가하고, 언마운트될 때는 제거
@@ -63,7 +73,9 @@ const Main = () => {
     <div>
       {sections.map((section) => (
         <div key={section.id} id={section.id}>
-          {section.component}
+          {React.cloneElement(section.component, {
+            nextClick: nextClick,
+          })}
         </div>
       ))}
     </div>
