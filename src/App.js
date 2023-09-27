@@ -1,13 +1,15 @@
 import './App.css';
+import Top from './components/common/Top';
 import Main from './main/Main';
 import Project from './main/Project';
 
 function App() {
   return (
-    <div>
+    <main className='relative'>
+      <Top/>
       <Main />
       <Project/>
-    </div>
+    </main>
   );
 }
 
