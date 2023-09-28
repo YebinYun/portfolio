@@ -13,6 +13,10 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 const Project = ({ nextClick }) => {
   return (
     <Background>
+      <div className="flex flex-col items-center text-white font-extrabold text-shadow-custom my-10">
+        <h1 className="text-6xl mb-2">Project List</h1>
+        <h2 className="text-2xl">지금까지 진행했던 프로젝트 입니다.</h2>
+      </div>
       {/* 프로젝트 캐러셀 */}
       <Swiper
         effect={"coverflow"}
