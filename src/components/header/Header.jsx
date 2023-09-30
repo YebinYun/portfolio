@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const liStyle =
-  "relative mx-10 py-2.5 px-12 cursor-pointer rounded transition-all duration-300 ";
+  "relative mx-10 py-2.5 px-12 cursor-pointer rounded-md transition-all duration-500 buttonHover hover:text-white";
 
 const headerItems = [
   { label: "About Me", id: "about" },
@@ -23,11 +23,7 @@ const Header = () => {
           <li
             key={headerItem.id}
             onClick={() => toggleMenu(headerItem.id)}
-            className={`${liStyle} ${
-              headerItem.id === selectedItem
-                ? "bg-[#02801d5e] text-white"
-                : "hover:bg-[#02801d5e] hover:text-white"
-            }`}>
+            className={`${liStyle}`}>
             <span>{headerItem.label}</span>
           </li>
         ))}

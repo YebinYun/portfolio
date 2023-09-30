@@ -69,10 +69,7 @@ a {
 .buttonHover {
   position: relative;
   background: white;
-  border-radius: 5px;
-   box-shadow:inset 1px 1px 1px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
+  
   z-index: 1;
   display: flex;
   align-items: center;
@@ -88,10 +85,6 @@ a {
   right: 0;
   z-index: -1;
   background-color: #02801d5e;
-  border-radius: 5px;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
   transition: all 0.5s ease;
 }
 .buttonHover:hover {
@@ -103,6 +96,20 @@ a {
 }
 .buttonHover:active {
   top: 2px;
+}
+
+/* 그림자 효과 */
+.shadow{
+  border-radius: 5px;
+   box-shadow:inset 1px 1px 1px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+}
+.shadow:after{
+  border-radius: 5px;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
 }
 
 /* 화살표 버튼 에니메이션 */
@@ -144,10 +151,9 @@ a {
   74%   {color:#87bb2c}
   75%   {color:#33a5ad}
   99%   {color:#33a5ad}
-  100%  {color:#e04b4e }
 }
 .title-word {
-  animation: color-animation 10s linear infinite;
+  animation: color-animation 8s linear infinite;
 }
 
 /* CSS 코드 */
