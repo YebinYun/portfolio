@@ -114,7 +114,6 @@ a {
     transform: translateY(10px);
   }
 }
-
 .animate-arrow {
   animation: arrow 1.0s linear;
   animation-iteration-count: infinite;
@@ -122,15 +121,32 @@ a {
 
 /* 스와이퍼 이미지 조정 */
 .mySwiper {
-  width: 1000px;
+  width: 100%;
 }
-
+.swiper-wrapper > div {
+  width: 33%;
+}
 .mySwiper .swiper-slide{
-    width: 400px;
-    height: 400px;
     border-radius: 5px;
 }
 .mySwiper .swiper-slide img{
     border-radius: 5px;
+}
+.swiper-pagination > span{
+  background-color: white;
+}
+
+/* 글자 색상 변경  3가지 색상이라 3등분 */
+@keyframes color-animation {
+  0%    {color:#1ca551b0}
+  32%   {color:#1ca551b0}
+  33%   {color:#f34e29b0}
+  65%   {color:#f34e29b0}
+  66%   {color:#1c7ea5b0}
+  99%   {color:#1c7ea5b0}
+  100%  {color:#1ca551b0}
+}
+.title-word {
+  animation: color-animation 8s linear infinite;
 }
 
