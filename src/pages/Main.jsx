@@ -72,7 +72,7 @@ const Main = () => {
   }, []);
 
   return (
-    <div>
+    <div className="">
       {sections.map((section) => (
         <div key={section.id} id={section.id}>
           {React.cloneElement(section.component, {
