@@ -69,7 +69,6 @@ a {
 .buttonHover {
   position: relative;
   background: white;
-  
   z-index: 1;
   display: flex;
   align-items: center;
@@ -99,13 +98,13 @@ a {
 }
 
 /* 그림자 효과 */
-.shadow{
+.shadowStyle{
   border-radius: 5px;
    box-shadow:inset 1px 1px 1px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
 }
-.shadow:after{
+.shadowStyle:after{
   border-radius: 5px;
    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
