@@ -1,7 +1,7 @@
 import React from 'react';
-import { Icon } from "@iconify/react";
 import Background from "../components/common/Background";
 import { Swiper, SwiperSlide } from "swiper/react";
+import MouseWheel from '../components/button/MouseWheel';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -46,15 +46,8 @@ const Project = ({ nextClick }) => {
           <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
         </SwiperSlide>
       </Swiper>
-
-      {/* 화살표버튼 */}
-      <button onClick={nextClick} className=" relative -bottom-20">
-        <Icon
-          className={`w-16 h-16 text-white ${`animate-arrow`} `}
-          icon="iconamoon:arrow-up-2"
-          rotate={2}
-        />
-      </button>
+      {/* 마우스 휠 버튼 */}
+      <MouseWheel onClick={nextClick} />
     </Background>
   );
 };

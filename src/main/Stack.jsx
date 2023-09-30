@@ -1,6 +1,7 @@
 import React from 'react';
 import { Icon } from "@iconify/react";
 import Background from '../components/common/Background';
+import MouseWheel from '../components/button/MouseWheel';
 
 const h1Style = "text-4xl font-extrabold text-gray-900 text-shadow-custom";
 const spanStyle = "text-2xl font-semibold text-black text-shadow-custom";
@@ -52,13 +53,7 @@ const Stack = ({ nextClick }) => {
             </ul>
           ))}
         </div>
-        {/* 화살표버튼 */}
-        <button onClick={nextClick} className="relative -bottom-20">
-          <Icon
-            className={`w-16 h-16 text-white ${`animate-arrow`} `}
-            icon="iconamoon:arrow-up-2"
-          />
-        </button>
+        <MouseWheel onClick={nextClick} />
       </div>
     </Background>
   );

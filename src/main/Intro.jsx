@@ -1,7 +1,7 @@
 import React from 'react';
-import { Icon } from "@iconify/react";
 import Background from '../components/common/Background';
 import ButtonWrap from '../components/button/ButtonWrap';
+import MouseWheel from '../components/button/MouseWheel';
 
 const Intro = ({ nextClick }) => {
   return (
@@ -23,17 +23,8 @@ const Intro = ({ nextClick }) => {
           방문해주셔서 감사합니다.
         </span>
       </div>
-
-      {/* 사이트버튼 */}
       <ButtonWrap />
-      {/* 화살표버튼 */}
-      <button onClick={nextClick} className=" relative -bottom-20">
-        <Icon
-          className={`w-16 h-16 text-white ${`animate-arrow`} `}
-          icon="iconamoon:arrow-up-2"
-          rotate={2}
-        />
-      </button>
+      <MouseWheel onClick={nextClick} />
     </Background>
   );
 };
