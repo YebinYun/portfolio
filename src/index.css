@@ -136,17 +136,21 @@ a {
   background-color: white;
 }
 
-/* 글자 색상 변경  3가지 색상이라 3등분 */
+/* 글자 색상 변경  5가지 색상이라 5등분 */
 @keyframes color-animation {
-  0%    {color:#1ca551b0}
-  32%   {color:#1ca551b0}
-  33%   {color:#f34e29b0}
-  65%   {color:#f34e29b0}
-  66%   {color:#1c7ea5b0}
-  99%   {color:#1c7ea5b0}
-  100%  {color:#1ca551b0}
+  0%    {color:#E1888A }
+  19%   {color:#E1888A }
+  20%   {color:#E19F85 }
+  39%   {color:#E19F85 }
+  40%   {color:#F3D1A4}
+  59%   {color:#F3D1A4}
+  60%   {color:#AFC18F}
+  79%   {color:#AFC18F}
+  80%   {color:#96B6B8}
+  99%   {color:#96B6B8}
+  100%  {color:#E1888A }
 }
 .title-word {
-  animation: color-animation 8s linear infinite;
+  animation: color-animation 10s linear infinite;
 }
 
