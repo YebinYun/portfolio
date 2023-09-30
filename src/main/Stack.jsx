@@ -7,7 +7,8 @@ const spanStyle = "text-2xl font-semibold text-black text-shadow-custom";
 const iconStyle = "w-8 h-8 mr-2.5"
 const liStyle = "flex mb-8";
 const ulStyle = "-mb-8 bg-white p-20 rounded-md opacity-80 h-full w-1/3 mx-10"
-const divStyle = "w-full border rounded-md my-6";
+const divStyle =
+  "w-full border-2 my-8 opacity-50 rounded-full shadow";
 
 
 const skills = {

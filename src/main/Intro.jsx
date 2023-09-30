@@ -10,10 +10,10 @@ const Intro = ({ nextClick }) => {
       <div className="w-full flex flex-col items-center text-shadow-custom">
         <div className="flex flex-col items-center text-white font-extrabold">
           <h1 className="text-6xl">안녕하세요.</h1>
-          {/* <span className="text-4xl pt-16">끊임없이 연구하며 소통하는</span> */}
-          <h2 className="py-16 text-4xl title-word">
-            끊임없이 연구하며 소통하는 프론트엔드 개발자,
-          </h2>
+          <ul className="flex text-4xl py-16">
+            <li className="mr-2.5 title-word">끊임없이 연구하며 소통하는</li>
+            <li className="">프론트엔드 개발자,</li>
+          </ul>
           <h2 className="text-4xl">윤예빈입니다.</h2>
         </div>
 
