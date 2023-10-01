@@ -21,6 +21,7 @@ const Project = ({ nextClick }) => {
         "인테리어 추천 커뮤니티 웹사이트는 다기능 온라인 플랫폼을 제공. 사용자들이해시태그 기능으로 특정 주제나 제품 정보를 쉽게 찾을 수 있으며, GPS 기반 인테리어 가게 추천과 팔로우/팔로워 기능도 포함한 웹 커뮤니티 사이트",
       gitHub: "https://github.com/YebinYun/seb45_main_027",
       link: "https://bbibbiapp.click/",
+      style: "cursor-not-allowed",
     },
     {
       img: "http://localhost:3000/Portfolio" + "/img/빈진우.gif",
@@ -88,7 +89,7 @@ const Project = ({ nextClick }) => {
                 </button>
                 <button
                   onClick={() => window.open(list.link, "_blank")}
-                  className={`${buttonStyle} buttonHover`}>
+                  className={`${buttonStyle} buttonHover ${list.style}`}>
                   사이트 보러가기
                 </button>
               </div>
