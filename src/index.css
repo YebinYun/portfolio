@@ -126,15 +126,19 @@ a {
 }
 
 /* 스와이퍼 이미지 조정 */
-.mySwiper {
+/* .mySwiper {
   width: 100%;
+  height: 100%;
+} */
+.swiper-wrapper > .swiper-slide {
+  width: 35%;
+  height: 35%;
 }
-.swiper-wrapper > div {
-  width: 33%;
-  border-radius: 25px;
-}
-.swiper-wrapper > div > img{
+.swiper-wrapper > .swiper-slide > img{
   aspect-ratio: 16 / 9;
+}
+.swiper-wrapper > .swiper-slide > div{
+  aspect-ratio: 2 / 1;
 }
 .swiper-pagination > span{
   background-color: #87bb2c;
