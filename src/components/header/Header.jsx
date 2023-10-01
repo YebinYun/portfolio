@@ -1,19 +1,30 @@
 import React, { useState } from "react";
 
 const liStyle =
-  "relative mx-10 py-2.5 px-12 cursor-pointer rounded-md transition-all duration-500 buttonHover hover:text-white";
-
-const headerItems = [
-  { label: "About Me", id: "about" },
-  { label: "Project", id: "project" },
-  { label: "Stack", id: "stack" },
-];
+  "mx-10 py-2.5 px-12 cursor-pointer rounded transition-all duration-300 hover:bg-[#02801d5e] hover:text-white hover:underline";
 
 const Header = () => {
+  const headerItems = [
+    { label: "About Me", id: "intro" },
+    { label: "Project", id: "project" },
+    { label: "Stack", id: "stack" },
+  ];
+
   const [selectedItem, setSelectedItem] = useState(null);
+
+  // 각 섹션으로 스크롤 이동하는 함수
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const toggleMenu = (itemId) => {
     setSelectedItem(itemId === selectedItem ? null : itemId);
+    if (itemId) {
+      scrollToSection(itemId);
+    }
   };
 
   return (
@@ -23,8 +34,8 @@ const Header = () => {
           <li
             key={headerItem.id}
             onClick={() => toggleMenu(headerItem.id)}
-            className={`${liStyle}`}>
-            <span>{headerItem.label}</span>
+            className={liStyle}>
+            {headerItem.label}
           </li>
         ))}
       </ul>
