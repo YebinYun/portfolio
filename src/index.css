@@ -131,13 +131,13 @@ a {
 }
 .swiper-wrapper > div {
   width: 33%;
-    border-radius: 5px;
+  border-radius: 25px;
 }
-
-/* .mySwiper .swiper-slide img{
-} */
+.swiper-wrapper > div > img{
+  aspect-ratio: 16 / 9;
+}
 .swiper-pagination > span{
-  background-color: white;
+  background-color: #87bb2c;
 }
 
 /* 글자 색상 변경  4가지 색상이라 4등분 */
