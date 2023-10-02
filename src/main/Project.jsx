@@ -18,9 +18,10 @@ const Project = ({ nextClick }) => {
       img: "https://yebinyun.github.io/Portfolio/" + "/img/삐삐.webp",
       title: "삐삐",
       subTitle:
-        "인테리어 추천 커뮤니티 웹사이트는 다기능 온라인 플랫폼을 제공. 사용자들이해시태그 기능으로 특정 주제나 제품 정보를 쉽게 찾을 수 있으며, GPS 기반 인테리어 가게 추천과 팔로우/팔로워 기능도 포함한 웹 커뮤니티 사이트",
+        "인테리어 추천 커뮤니티 웹사이트는 다기능 온라인 플랫폼을 제공. 사용자들이해시태그 기능으로 특정 주제나 제품 정보를 쉽게 찾을 수 있으며, GPS 기반 인테리어 가게 추천등을 포함한 웹 커뮤니티 사이트",
       gitHub: "https://github.com/YebinYun/seb45_main_027",
-      link: "https://bbibbiapp.click/",
+      link: "",
+      linkMsg: "서버 종료",
       style: "cursor-not-allowed",
     },
     {
@@ -30,14 +31,17 @@ const Project = ({ nextClick }) => {
         "운동 트레커_프로젝트 (Exercise Tracker) - 사용자의 위치를 기반으로 헬스장을 알려주고, 다양한 운동종류들을 리스트로 보여준 뒤 사용자가 선택하여 해당 날짜에 운동 기록을 할수 있는 운동 트레커 개발.",
       gitHub: "https://github.com/YebinYun/exercise-tracker-app",
       link: "https://dpftlel21.github.io/exercise-tracker-app/",
+      linkMsg: "사이트 보러가기",
     },
     {
-      img: "https://yebinyun.github.io/Portfolio/" + "/img/오늘뭐먹지.질문지.gif",
+      img:
+        "https://yebinyun.github.io/Portfolio/" + "/img/오늘뭐먹지.질문지.gif",
       title: "오늘 뭐 먹지 ver. 질문지",
       subTitle:
         "현재 날씨와 시간에 맞춰 알맞은 배경화면을 보여주며, 선택지를 참고하여 설문 결과를 보여주며, 결과는 사용자의 위치를 기반으로 메뉴를 추천하여 무얼 먹을까 고민을 덜어주는 사용자 친화적 웹사이트 개발.",
       gitHub: "https://github.com/YebinYun/what-eat-today",
       link: "https://yebinyun.github.io/what-eat-today/",
+      linkMsg: "사이트 보러가기",
     },
     {
       img: "https://yebinyun.github.io/Portfolio/" + "/img/오늘뭐먹지.룰렛.png",
@@ -46,6 +50,7 @@ const Project = ({ nextClick }) => {
         "사용자가 선택한 서울시 상세 지역구의 음식 종목을 바탕으로 인기 메뉴를 추천하고, 만족도 높은식당을 소개해 주며, 해당 식당의 후기까지 검색 가능한 랜덤 룰렛 형식의 웹사이트를 개발.",
       gitHub: "https://github.com/YebinYun/lunch-recomandation",
       link: "https://yebinyun.github.io/lunch-recomandation/",
+      linkMsg: "사이트 보러가기",
     },
   ];
 
@@ -78,7 +83,7 @@ const Project = ({ nextClick }) => {
               <h1 className="text-gray-800 font-bold text-3xl mb-4">
                 {list.title}
               </h1>
-              <h2 className="text-gray-600 font-semibold text-xl mb-4 px-20">
+              <h2 className="text-gray-600 font-semibold text-xl mb-4 px-10">
                 {list.subTitle}
               </h2>
               <div className="mt-4 flex">
@@ -88,9 +93,9 @@ const Project = ({ nextClick }) => {
                   GitHub 보러가기
                 </button>
                 <button
-                  onClick={() => window.open(list.link, "_blank")}
+                  onClick={() => list.link && window.open(list.link, "_blank")}
                   className={`${buttonStyle} buttonHover ${list.style}`}>
-                  사이트 보러가기
+                  {list.linkMsg}
                 </button>
               </div>
             </div>
