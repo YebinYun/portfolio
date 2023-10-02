@@ -126,19 +126,26 @@ a {
 }
 
 /* 스와이퍼 이미지 조정 */
-/* .mySwiper {
+.swiper{
   width: 100%;
-  height: 100%;
-} */
+  padding: 0px 288px !important;
+}
+.swiper-wrapper{
+  width: 100%;
+}
 .swiper-wrapper > .swiper-slide {
   width: 35%;
-  height: 35%;
+  height: fit-content;
 }
 .swiper-wrapper > .swiper-slide > img{
   aspect-ratio: 16 / 9;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
 }
 .swiper-wrapper > .swiper-slide > div{
   aspect-ratio: 2 / 1;
+  border-bottom-left-radius:0.5rem ;
+  border-bottom-right-radius:0.5rem ;
 }
 .swiper-pagination > span{
   background-color: #87bb2c;
