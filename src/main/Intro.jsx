@@ -11,7 +11,9 @@ const Intro = ({ nextClick }) => {
         <div className="flex flex-col items-center text-white font-extrabold">
           <h1 className="text-6xl">안녕하세요.</h1>
           <ul className="flex items-center text-4xl py-16">
-            <li className="mr-2.5 title-word bg-white px-2.5 py-1 rounded-md">끊임없이 연구하며 소통하는</li>
+            <li className="mr-2.5 title-word bg-white px-2.5 py-1 rounded-md">
+              미래에 대한 열정을 갖춘
+            </li>
             <li className="">프론트엔드 개발자,</li>
           </ul>
           <h2 className="text-4xl">윤예빈입니다.</h2>
