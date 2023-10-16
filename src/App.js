@@ -5,10 +5,8 @@ import Main from './pages/Main';
 import Header from './components/header/Header';
 
 function App() {
-  
-
   return (
-    <main className='relative'>
+    <main>
       <Header/>
       <Top/>
       <Main/>
