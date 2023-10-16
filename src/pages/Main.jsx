@@ -42,6 +42,8 @@ const Main = () => {
     }, 250); // <- debounceTimeout
   }
 
+
+
   // 지정된 섹션으로 스크롤하는 함수
   function scrollToSection(targetIndex = index.current) {
     index.current = targetIndex;
