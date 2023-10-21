@@ -1,13 +1,7 @@
 import React from 'react';
 import Background from "../components/common/Background";
-import { Swiper, SwiperSlide } from "swiper/react";
 import MouseWheel from '../components/button/MouseWheel';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-// import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+
 
 const buttonStyle =
   "border rounded text-base font-semibold text-gray-800 shadow ";
@@ -17,8 +11,6 @@ const Project = ({ nextClick }) => {
     {
       img: "https://yebinyun.github.io/Portfolio/" + "/img/삐삐.webp",
       title: "인테리어 추천 커뮤니티 웹사이트",
-      subTitle:
-        " 웹사이트는 다기능 온라인 플랫폼을 제공. 사용자들이해시태그 기능으로 특정 주제나 제품 정보를 쉽게 찾을 수 있으며, GPS 기반 인테리어 가게 추천등을 포함한 웹 커뮤니티 사이트",
       gitHub: "https://github.com/YebinYun/seb45_main_027",
       link: "",
       linkMsg: "서버 종료",
@@ -27,18 +19,14 @@ const Project = ({ nextClick }) => {
     {
       img: "https://yebinyun.github.io/Portfolio/" + "/img/빈진우.gif",
       title: "운동 기록 Exercise Tracker",
-      subTitle:
-        "운동 트레커_프로젝트 (Exercise Tracker) - 사용자의 위치를 기반으로 헬스장을 알려주고, 다양한 운동종류들을 리스트로 보여준 뒤 사용자가 선택하여 해당 날짜에 운동 기록을 할수 있는 운동 트레커 개발.",
       gitHub: "https://github.com/YebinYun/exercise-tracker-app",
       link: "https://dpftlel21.github.io/exercise-tracker-app/",
-      linkMsg: "Site",
+      linkMsg: "사이트 보러가기",
     },
     {
       img:
         "https://yebinyun.github.io/Portfolio/" + "/img/오늘뭐먹지.질문지.gif",
       title: "메뉴 추천 웹 사이트 ver.질문지",
-      subTitle:
-        "현재 날씨와 시간에 맞춰 알맞은 배경화면을 보여주며, 선택지를 참고하여 설문 결과를 보여주며, 결과는 사용자의 위치를 기반으로 메뉴를 추천하여 무얼 먹을까 고민을 덜어주는 사용자 친화적 웹사이트 개발.",
       gitHub: "https://github.com/YebinYun/what-eat-today",
       link: "https://yebinyun.github.io/what-eat-today/",
       linkMsg: "사이트 보러가기",
@@ -46,8 +34,6 @@ const Project = ({ nextClick }) => {
     {
       img: "https://yebinyun.github.io/Portfolio/" + "/img/오늘뭐먹지.룰렛.png",
       title: "메뉴 추천 웹 사이트 ver.룰렛",
-      subTitle:
-        "사용자가 선택한 서울시 상세 지역구의 음식 종목을 바탕으로 인기 메뉴를 추천하고, 만족도 높은식당을 소개해 주며, 해당 식당의 후기까지 검색 가능한 랜덤 룰렛 형식의 웹사이트를 개발.",
       gitHub: "https://github.com/YebinYun/lunch-recomandation",
       link: "https://yebinyun.github.io/lunch-recomandation/",
       linkMsg: "사이트 보러가기",
@@ -60,32 +46,18 @@ const Project = ({ nextClick }) => {
         <h1 className="text-6xl mb-2.5">Project List</h1>
         <h2 className="text-2xl">지금까지 진행했던 프로젝트 입니다.</h2>
       </div>
-      {/* 프로젝트 캐러셀 */}
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={3}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper">
+      <div className="w-full flex flex-col justify-center lg:flex-row px-4">
         {projectList.map((list, idx) => (
-          <SwiperSlide key={idx} className="swiper-slide">
-            <img src={list.img} alt="프로젝트 이미지" />
-            <div className="bg-white flex flex-col items-center py-12">
-              <h1 className="text-gray-900 font-bold text-2xl mb-4">
+          <nav key={idx} className="flex lg:flex-col mx-4 ">
+            <img
+              src={list.img}
+              alt="프로젝트 이미지"
+              className="w-60 h-36 lg:w-full lg:h-full rounded-l-lg lg:rounded-t-lg"
+            />
+            <div className="w-full h-36 mb-4 bg-white rounded-r-lg lg:rounded-tr-none lg:rounded-b-lg flex flex-col items-center justify-center lg:py-12 lg:mb-0 lg:h-fit">
+              <h1 className="text-gray-900 font-bold text-2xl lg:mb-4">
                 {list.title}
               </h1>
-              {/* <h2 className="text-gray-600 font-semibold text-lg mb-4 px-10">
-                {list.subTitle}
-              </h2> */}
               <div className="mt-4 flex">
                 <button
                   onClick={() => window.open(list.gitHub, "_blank")}
@@ -99,9 +71,10 @@ const Project = ({ nextClick }) => {
                 </button>
               </div>
             </div>
-          </SwiperSlide>
+          </nav>
         ))}
-      </Swiper>
+      </div>
+
       {/* 마우스 휠 버튼 */}
       <MouseWheel onClick={nextClick} />
     </Background>

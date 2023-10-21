@@ -125,38 +125,6 @@ a {
   animation-iteration-count: infinite;
 }
 
-/* 스와이퍼 이미지 조정 */
-.swiper{
-  width: 100%;
-  height: max-content;
-  padding: 0px 288px !important;
-}
-.swiper-wrapper > .swiper-slide {
-  height: fit-content;
-}
-.swiper-wrapper > .swiper-slide > img{
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-}
-.swiper-wrapper > .swiper-slide > div{
-  width: 100%;
-  aspect-ratio: 16/3;
-  border-bottom-left-radius:0.5rem ;
-  border-bottom-right-radius:0.5rem ;
-}
-/* .swiper-wrapper > .swiper-slide > div > h2 {
-  display:block;
-  overflow: hidden; 
-  text-overflow: ellipsis;
-  white-space: nowrap; 
-  width: 20em;
-} */
-.swiper-pagination > span{
-  background-color: #87bb2c;
-}
-
 /* 글자 색상 변경  4가지 색상이라 4등분 */
 @keyframes color-animation {
   0%    {color:#e04b4e }
