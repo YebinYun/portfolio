@@ -31,7 +31,7 @@ const buttonsData = [
 
 const ButtonWrap = () => {
   return (
-    <div className="flex items-center py-10">
+    <div className="flex items-center py-10 mt-20">
       {buttonsData.map((button, index) => (
         <button
           key={index}

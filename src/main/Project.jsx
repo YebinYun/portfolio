@@ -42,41 +42,47 @@ const Project = ({ nextClick }) => {
 
   return (
     <Background divclassName="h-full w-full">
-      <div className="flex flex-col items-center text-white font-extrabold text-shadow-custom mb-20">
-        <h1 className="text-6xl mb-2.5">Project List</h1>
-        <h2 className="text-2xl">지금까지 진행했던 프로젝트 입니다.</h2>
-      </div>
-      <div className="w-full flex flex-col justify-center lg:flex-row px-4">
-        {projectList.map((list, idx) => (
-          <nav key={idx} className="flex lg:flex-col mx-4 ">
-            <img
-              src={list.img}
-              alt="프로젝트 이미지"
-              className="w-60 h-36 lg:w-full lg:h-full rounded-l-lg lg:rounded-t-lg"
-            />
-            <div className="w-full h-36 mb-4 bg-white rounded-r-lg lg:rounded-tr-none lg:rounded-b-lg flex flex-col items-center justify-center lg:py-12 lg:mb-0 lg:h-fit">
-              <h1 className="text-gray-900 font-bold text-2xl lg:mb-4">
-                {list.title}
-              </h1>
-              <div className="mt-4 flex">
-                <button
-                  onClick={() => window.open(list.gitHub, "_blank")}
-                  className={`${buttonStyle} buttonHover`}>
-                  프로젝트 설명
-                </button>
-                <button
-                  onClick={() => list.link && window.open(list.link, "_blank")}
-                  className={`${buttonStyle} buttonHover ${list.style}`}>
-                  {list.linkMsg}
-                </button>
-              </div>
-            </div>
-          </nav>
-        ))}
-      </div>
+      <div className="w-full h-full">
+        <div className="flex justify-center my-20">
+          <h1 className="font-extrabold text-shadow-custom text-6xl mb-4 text-red-300">
+            Project List
+          </h1>
+        </div>
 
-      {/* 마우스 휠 버튼 */}
-      <MouseWheel onClick={nextClick} />
+        <div className="w-full grid lg:grid-cols-2 gap-10 pb-20">
+          {projectList.map((list, idx) => (
+            <nav key={idx} className="flex flex-col">
+              <img
+                src={list.img}
+                alt="프로젝트 이미지"
+                className="w-full h-full rounded-t-lg"
+              />
+              <div className="w-full h-full bg-white rounded-b-lg flex flex-col items-center justify-center py-12 shadow">
+                <h1 className="text-gray-900 font-bold text-2xl lg:mb-4">
+                  {list.title}
+                </h1>
+                <div className="mt-4 flex">
+                  <button
+                    onClick={() => window.open(list.gitHub, "_blank")}
+                    className={`${buttonStyle} buttonHover`}>
+                    프로젝트 설명
+                  </button>
+                  <button
+                    onClick={() =>
+                      list.link && window.open(list.link, "_blank")
+                    }
+                    className={`${buttonStyle} buttonHover ${list.style}`}>
+                    {list.linkMsg}
+                  </button>
+                </div>
+              </div>
+            </nav>
+          ))}
+        </div>
+
+        {/* 마우스 휠 버튼 */}
+        <MouseWheel onClick={nextClick} />
+      </div>
     </Background>
   );
 };
