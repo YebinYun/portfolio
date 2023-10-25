@@ -3,8 +3,7 @@ import { Icon } from "@iconify/react";
 import Background from '../components/common/Background';
 import MouseWheel from '../components/button/MouseWheel';
 
-const wrapStyle =
-  "p-8 rounded-md opacity-80 shadow-lg";
+const wrapStyle = "p-8 rounded-md opacity-80 shadow-lg border-2 border-red-100";
 const h1Style = "w-full text-4xl font-extrabold text-gray-900 text-shadow-custom";
 const divStyle =
   "hidden lg:flex w-full border-2 border-red-200 my-8 opacity-50 rounded-full shadow";
@@ -40,12 +39,12 @@ const Stack = ({ nextClick }) => {
             Stack
           </h1>
         </div>
-        <div className="w-full grid grid-rows-3 gap-10 lg:grid-cols-3 lg:grid-rows-none ">
+        <div className="w-full grid grid-rows-3 gap-10 2xl:grid-cols-3 2xl:grid-rows-none ">
           {Object.keys(skills).map((category, index) => (
             <div key={index} className={wrapStyle}>
               <h1 className={h1Style}>{category}</h1>
               <div className={divStyle} />
-              <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-col">
+              <div className="w-full grid grid-cols-1 lg:flex lg:flex-col">
                 {skills[category].map((skill, skillIndex) => (
                   <ul key={skillIndex} className={ulStyle}>
                     <li className="flex border-2 border-red-50 bg-red-100 shadow p-4 rounded-lg">

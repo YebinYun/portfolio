@@ -3,13 +3,13 @@ import React from 'react';
 const Background = ({ mainclassName, divclassName, children, customStyle }) => {
   return (
     <main
-      className={`w-full h-full flex justify-center px-40 ${mainclassName}`}
+      className={`w-full h-full flex justify-center px-80 ${mainclassName}`}
       style={{
         ...customStyle,
       }}
     >
       <div
-        className={`flex flex-col items-center justify-center ${divclassName}`}>
+        className={`flex flex-col items-center justify-center px-20 ${divclassName}`}>
         {children}
       </div>
     </main>
