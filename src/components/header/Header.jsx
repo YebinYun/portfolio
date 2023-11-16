@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   return (
-    <div className="w-full fixed top-0 z-50 pt-5">
+    <header className="w-full pt-5">
       <ul className="w-full text-2xl font-bold flex justify-center text-gray-800 my-2">
         {headerItems.map((headerItem) => (
           <li
@@ -39,7 +39,7 @@ const Header = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </header>
   );
 };
 

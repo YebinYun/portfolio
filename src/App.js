@@ -2,13 +2,14 @@ import './App.css';
 import React from "react";
 import Main from './pages/Main';
 import Header from './components/header/Header';
+import Background from './components/common/Background'
 
 function App() {
   return (
-    <main>
+    <Background>
       <Header/>
       <Main/>
-    </main>
+    </Background>
   );
 }
 

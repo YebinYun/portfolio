@@ -2,17 +2,17 @@ import React from 'react';
 
 const Background = ({ mainclassName, divclassName, children, customStyle }) => {
   return (
-    <main
-      className={`w-full h-full flex justify-center px-80 ${mainclassName}`}
+    <div
+      className={`w-full h-screen ${mainclassName}`}
       style={{
         ...customStyle,
-      }}
-    >
-      <div
-        className={`flex flex-col items-center justify-center px-20 ${divclassName}`}>
+        backgroundImage:
+          "linear-gradient(180deg, rgb(255, 187, 187) -34.2%, rgba(255, 102, 102, 0.40) 42.5%, rgba(255, 0, 0, 0.00) 223.53%)",
+      }}>
+      <div>
         {children}
       </div>
-    </main>
+    </div>
   );
 };
 
