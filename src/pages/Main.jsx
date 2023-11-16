@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Intro from '../main/Intro';
 import Project from '../main/Project';
 import Stack from "../main/Stack";
+import Background from "../components/common/Background"
 
 const Main = () => {
   const sections = [
@@ -35,15 +36,20 @@ const Main = () => {
 
 
   return (
-    <div>
-      {sections.map((section) => (
+    <main className="relative h-[90vh]">
+      <div className="w-full h-full flex items-center justify-center">
+        <div className="w-[90%] h-[85%] border border-red-200 shadow-lg rounded-xl">
+          <Intro />
+          {/* {sections.map((section) => (
         <div key={section.id} id={section.id}>
           {React.cloneElement(section.component, {
             nextClick: nextClick,
           })}
         </div>
-      ))}
-    </div>
+      ))} */}
+        </div>
+      </div>
+    </main>
   );
 };
 
