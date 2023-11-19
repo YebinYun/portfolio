@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
-import Intro from '../main/Intro';
-import Project from '../main/Project';
-import Stack from "../main/Stack";
-import Background from "../components/common/Background"
+import Intro from '../pages/Intro';
+import Project from '../pages/Project';
+import Stack from "../pages/Stack";
 
 const Main = () => {
   const sections = [
