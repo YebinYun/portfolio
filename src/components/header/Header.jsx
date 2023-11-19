@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const liStyle =
-  "bg-red-100 md:mx-10 py-4 px-8 cursor-pointer border border-red-100 shadow-lg rounded-full transition-all duration-300 hover:bg-red-300 hover:border-red-300 hover:text-white hover:shadow-inner hover:underline";
+  "bg-red-100 mx-10 py-4 px-8 cursor-pointer border border-red-100 shadow-lg rounded-full transition-all duration-300 hover:bg-red-300 hover:border-red-300 hover:text-white hover:shadow-inner hover:underline";
 
 const Header = () => {
   const headerItems = [
