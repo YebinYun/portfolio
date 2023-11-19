@@ -9,7 +9,7 @@ const Main = ({ section, sections }) => {
   return (
     <main className="relative h-[90vh]">
       <div className="w-full h-full flex items-center justify-center">
-        <div className="w-[90%] h-[85%] border border-red-200 shadow-lg rounded-xl">
+        <div className="flex items-center justify-center w-[90%] h-[85%] border border-red-200 shadow-lg rounded-xl">
           {currentSection ? currentSection.component : sections}
         </div>
       </div>
