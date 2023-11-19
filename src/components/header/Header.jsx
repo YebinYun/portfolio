@@ -5,9 +5,9 @@ const liStyle =
 
 const Header = ({}) => {
   const headerItems = [
-    { label: "Home", id: "intro" },
-    { label: "Portfolio", id: "project" },
-    { label: "Stack", id: "stack" },
+    { name: "Home", id: "home" },
+    { name: "Portfolio", id: "portfolio" },
+    { name: "Stack", id: "stack" },
   ];
 
   const [selectedItem, setSelectedItem] = useState(null);
@@ -35,7 +35,7 @@ const Header = ({}) => {
             key={headerItem.id}
             onClick={() => toggleMenu(headerItem.id)}
             className={liStyle}>
-            {headerItem.label}
+            {headerItem.name}
           </li>
         ))}
       </ul>

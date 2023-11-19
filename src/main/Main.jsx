@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
-import Intro from '../pages/Intro';
-import Project from '../pages/Project';
+import Home from "../pages/Home";
+import Portfolio from "../pages/Portfolio";
 import Stack from "../pages/Stack";
 
 const Main = ({ children }) => {
   const sections = [
-    { id: "intro", component: <Intro /> },
-    { id: "project", component: <Project /> },
+    { id: "home", component: <Home /> },
+    { id: "portfolio", component: <Portfolio /> },
     { id: "stack", component: <Stack /> },
   ];
   // 현재 표시되고 있는 섹션의 인덱스를 추적하는 useRef
