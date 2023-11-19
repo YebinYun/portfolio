@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 const liStyle =
-  "bg-red-100 mx-10 py-4 px-8 cursor-pointer border border-red-100 shadow-lg rounded-full transition-all duration-300 hover:bg-red-300 hover:border-red-300 hover:text-white hover:shadow-inner hover:underline";
+  "bg-red-100 mt-4 md:mt-8 lg:mt-6 mx-2.5 md:mx-8 lg:mx-12 py-4 px-8 cursor-pointer border border-red-100 shadow-lg rounded-full transition-all duration-300 hover:bg-red-300 hover:border-red-300 hover:text-white hover:shadow-inner hover:underline";
 
-const Header = () => {
+const Header = ({}) => {
   const headerItems = [
     { label: "Home", id: "intro" },
     { label: "Portfolio", id: "project" },
