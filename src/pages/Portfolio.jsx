@@ -1,11 +1,6 @@
 import React from 'react';
-import MouseWheel from '../components/button/MouseWheel';
 
-
-const buttonStyle =
-  "border rounded text-base font-semibold text-gray-800 shadow ";
-
-const Project = ({ nextClick }) => {
+const Project = ({ Button, TitleText }) => {
   const projectList = [
     {
       img: "https://yebinyun.github.io/Portfolio/" + "/img/삐삐.webp",
@@ -40,47 +35,37 @@ const Project = ({ nextClick }) => {
   ];
 
   return (
-    <div divclassName="h-full w-full">
-      <div className="w-full h-full">
-        <div className="flex justify-center my-20">
-          <h1 className="font-extrabold text-shadow-custom text-6xl mb-4 text-red-300">
-            Project List
-          </h1>
-        </div>
+    <div className=" relative top-40">
+      <div className="flex justify-center my-20">
+        <TitleText>
+          Project List
+        </TitleText>
+      </div>
 
-        <div className="w-full grid lg:grid-cols-2 gap-10 pb-20">
-          {projectList.map((list, idx) => (
-            <nav key={idx} className="flex flex-col">
-              <img
-                src={list.img}
-                alt="프로젝트 이미지"
-                className="w-full h-full rounded-t-lg"
-              />
-              <div className="w-full h-full bg-white rounded-b-lg flex flex-col items-center justify-center py-12 shadow">
-                <h1 className="text-gray-900 font-bold text-2xl lg:mb-4">
-                  {list.title}
-                </h1>
-                <div className="mt-4 flex">
-                  <button
-                    onClick={() => window.open(list.gitHub, "_blank")}
-                    className={`${buttonStyle} buttonHover`}>
-                    프로젝트 설명
-                  </button>
-                  <button
-                    onClick={() =>
-                      list.link && window.open(list.link, "_blank")
-                    }
-                    className={`${buttonStyle} buttonHover ${list.style}`}>
-                    {list.linkMsg}
-                  </button>
-                </div>
+      <div>
+        {projectList.map((list, idx) => (
+          <nav key={idx} className="flex flex-col my-10">
+            <img
+              src={list.img}
+              alt="프로젝트 이미지"
+              className="hidden md:block w-full h-full rounded-t-lg"
+            />
+            <div className="bg-white rounded-lg md:rounded-b-lg flex flex-col items-center justify-center py-12 shadow">
+              <h1 className="text-gray-900 font-bold text-2xl lg:mb-4">
+                {list.title}
+              </h1>
+              <div className="mt-4 flex">
+                <Button onClick={() => window.open(list.gitHub, "_blank")}>
+                  프로젝트 설명
+                </Button>
+                <Button
+                  onClick={() => list.link && window.open(list.link, "_blank")}>
+                  {list.linkMsg}
+                </Button>
               </div>
-            </nav>
-          ))}
-        </div>
-
-        {/* 마우스 휠 버튼 */}
-        <MouseWheel onClick={nextClick} />
+            </div>
+          </nav>
+        ))}
       </div>
     </div>
   );

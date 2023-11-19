@@ -28,11 +28,19 @@ function App() {
   flex 
   items-center 
 `;
+  const TitleText = tw.h1`
+  text-[3rem] 
+  md:text-[4rem] 
+  lg:text-[5rem] 
+  text-center 
+  text-white 
+  font-extrabold
+  `
   
   const sections = [
-    { name: "Home", id: "home", component: <Home Button={Button} /> },
-    { name: "Portfolio", id: "portfolio", component: <Portfolio /> },
-    { name: "Stack", id: "stack", component: <Stack /> },
+    { name: "Home", id: "home", component: <Home Button={Button} TitleText={TitleText} /> },
+    { name: "Portfolio", id: "portfolio", component: <Portfolio Button={Button} TitleText={TitleText} /> },
+    { name: "Stack", id: "stack", component: <Stack TitleText={TitleText} /> },
   ];
 
   const [section, setSection] = useState(sections[0].id);

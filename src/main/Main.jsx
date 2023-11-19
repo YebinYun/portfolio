@@ -9,7 +9,7 @@ const Main = ({ section, sections }) => {
   return (
     <main className="relative h-[80vh] top-10">
       <div className="w-full h-full flex items-center justify-center">
-        <div className="flex items-center justify-center w-[80%] h-[90%] border border-red-200 shadow-lg rounded-xl">
+        <div className="overflow-y-auto flex items-center justify-center w-[80%] h-[90%] border border-red-200 shadow-lg rounded-xl">
           {currentSection ? currentSection.component : sections}
         </div>
       </div>
