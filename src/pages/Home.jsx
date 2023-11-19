@@ -1,7 +1,7 @@
 import React from 'react';
 import ButtonWrap from '../components/button/ButtonWrap';
 
-const Intro = () => {
+const Home = ({Button}) => {
   return (
     <div>
       {/* 인사 문구 */}
@@ -24,9 +24,9 @@ const Intro = () => {
           방문해주셔서 감사합니다.
         </span>
       </div>
-      <ButtonWrap />
+      <ButtonWrap Button={Button} />
     </div>
   );
 };
 
-export default Intro;
+export default Home;
