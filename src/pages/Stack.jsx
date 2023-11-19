@@ -1,6 +1,5 @@
 import React from 'react';
 import { Icon } from "@iconify/react";
-import Background from '../components/common/Background';
 import MouseWheel from '../components/button/MouseWheel';
 
 const wrapStyle = "p-8 rounded-md opacity-80 shadow-lg border-2 border-red-100";
@@ -32,7 +31,7 @@ const skills = {
   
 const Stack = ({ nextClick }) => {
   return (
-    <Background mainclassName="h-screen" divclassName="h-full w-full">
+    <div mainclassName="h-screen" divclassName="h-full w-full">
       <div className="w-full mt-96 md:mt-[400px] lg:mt-0">
         <div className="flex justify-center mb-20">
           <h1 className="font-extrabold text-shadow-custom text-6xl mb-4 text-red-300">
@@ -59,7 +58,7 @@ const Stack = ({ nextClick }) => {
         </div>
         <MouseWheel onClick={nextClick} />
       </div>
-    </Background>
+    </div>
   );
 };
 

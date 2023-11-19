@@ -1,5 +1,4 @@
 import React from 'react';
-import Background from "../components/common/Background";
 import MouseWheel from '../components/button/MouseWheel';
 
 
@@ -41,7 +40,7 @@ const Project = ({ nextClick }) => {
   ];
 
   return (
-    <Background divclassName="h-full w-full">
+    <div divclassName="h-full w-full">
       <div className="w-full h-full">
         <div className="flex justify-center my-20">
           <h1 className="font-extrabold text-shadow-custom text-6xl mb-4 text-red-300">
@@ -83,7 +82,7 @@ const Project = ({ nextClick }) => {
         {/* 마우스 휠 버튼 */}
         <MouseWheel onClick={nextClick} />
       </div>
-    </Background>
+    </div>
   );
 };
 
