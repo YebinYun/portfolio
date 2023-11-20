@@ -1,8 +1,8 @@
-import './App.css';
+import "./App.css";
 import tw from "tailwind-styled-components";
-import React, {useState} from "react";
-import Main from './main/Main';
-import Header from './components/header/Header';
+import React, { useState } from "react";
+import Main from "./main/Main";
+import Header from "./components/header/Header";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Stack from "./pages/Stack";
@@ -35,15 +35,18 @@ function App() {
   text-center 
   text-white 
   font-extrabold
-  `
-  
+  `;
+
   const sections = [
-    { name: "Home", id: "home", component: <Home Button={Button} TitleText={TitleText} /> },
-    { name: "Portfolio", id: "portfolio", component: <Portfolio Button={Button} TitleText={TitleText} /> },
-    { name: "Stack", id: "stack", component: <Stack TitleText={TitleText} /> },
+    { name: "Home", component: <Home Button={Button} TitleText={TitleText} /> },
+    {
+      name: "Portfolio",
+      component: <Portfolio Button={Button} TitleText={TitleText} />,
+    },
+    { name: "Stack", component: <Stack TitleText={TitleText} /> },
   ];
 
-  const [section, setSection] = useState(sections[0].id);
+  const [section, setSection] = useState(sections[0].component);
 
   return (
     <div
@@ -51,7 +54,8 @@ function App() {
       style={{
         backgroundImage:
           "linear-gradient(180deg, rgb(255, 187, 187) -34.2%, rgba(255, 102, 102, 0.40) 42.5%, rgba(255, 0, 0, 0.00) 223.53%)",
-      }}>
+      }}
+    >
       <Header setSection={setSection} sections={sections} Button={Button} />
       <Main section={section} sections={sections} />
     </div>
