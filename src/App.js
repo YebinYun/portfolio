@@ -38,12 +38,18 @@ function App() {
   `;
 
   const sections = [
-    { name: "Home", component: <Home Button={Button} TitleText={TitleText} /> },
+    {
+      name: "Home",
+      component: <Home Button={Button} TitleText={TitleText} />,
+    },
     {
       name: "Portfolio",
       component: <Portfolio Button={Button} TitleText={TitleText} />,
     },
-    { name: "Stack", component: <Stack TitleText={TitleText} /> },
+    {
+      name: "Stack",
+      component: <Stack TitleText={TitleText} />,
+    },
   ];
 
   const [section, setSection] = useState(sections[0].component);

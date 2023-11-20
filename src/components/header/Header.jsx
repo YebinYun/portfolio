@@ -12,18 +12,20 @@ const Header = ({ setSection, sections, Button }) => {
     px-8 
     hover:text-white
   `;
-  const clickItemHandler = (id) => {
-    setSection(id);
+  const clickButtonHandler = (button) => {
+    setSection(button);
   };
 
   return (
     <header className="w-full pt-5">
       <nav className="w-full text-2xl font-bold flex justify-center text-gray-800 my-2">
-        {sections.map((headerItem) => (
+        {sections.map((headerButton) => (
           <HeaderButton
-            key={headerItem.id}
-            onClick={() => clickItemHandler(headerItem.id)}>
-            {headerItem.name}
+            // className={`btn ${headerItem.id === sections ? "active:" : ""}`}
+            key={headerButton}
+            onClick={() => clickButtonHandler(headerButton.name)}
+          >
+            {headerButton.name}
           </HeaderButton>
         ))}
       </nav>
