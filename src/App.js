@@ -63,7 +63,7 @@ function App() {
       }}
     >
       <Header setSection={setSection} sections={sections} Button={Button} />
-      <Main section={section} sections={sections} />
+      <Main section={section} />
     </div>
   );
 }

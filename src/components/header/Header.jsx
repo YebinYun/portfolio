@@ -11,7 +11,13 @@ const Header = ({ setSection, sections, Button }) => {
     lg:mx-12 
     px-8 
     hover:text-white
+    focus:text-white
+    focus:bg-red-300
+    focus:border-red-300
+    focus:shadow-inner
+    focus:underline
   `;
+
   const clickButtonHandler = (button) => {
     setSection(button);
   };
@@ -22,8 +28,8 @@ const Header = ({ setSection, sections, Button }) => {
         {sections.map((headerButton) => (
           <HeaderButton
             // className={`btn ${headerItem.id === sections ? "active:" : ""}`}
-            key={headerButton}
-            onClick={() => clickButtonHandler(headerButton.name)}
+            key={headerButton.name}
+            onClick={() => clickButtonHandler(headerButton.component)}
           >
             {headerButton.name}
           </HeaderButton>
