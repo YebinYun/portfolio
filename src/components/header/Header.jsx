@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import tw from "tailwind-styled-components";
 
 const Header = ({ setSection, sections, Button }) => {
@@ -11,25 +12,22 @@ const Header = ({ setSection, sections, Button }) => {
     lg:mx-12 
     px-8 
     hover:text-white
-    focus:text-white
-    focus:bg-red-300
-    focus:border-red-300
-    focus:shadow-inner
-    focus:underline
   `;
 
-  const clickButtonHandler = (button) => {
-    setSection(button);
-  };
+  const action = " text-white bg-red-300 border-red-300 shadow-inner underline";
+  const [isActive, setIsActive] = useState({ 0: true });
 
   return (
     <header className="w-full pt-5">
       <nav className="w-full text-2xl font-bold flex justify-center text-gray-800 my-2">
-        {sections.map((headerButton) => (
+        {sections.map((headerButton, idx) => (
           <HeaderButton
-            // className={`btn ${headerItem.id === sections ? "active:" : ""}`}
+            className={isActive[idx] && `${action}`}
             key={headerButton.name}
-            onClick={() => clickButtonHandler(headerButton.component)}
+            onClick={() => {
+              setSection(headerButton.component);
+              setIsActive((pre) => ({ [idx]: !pre[idx] }));
+            }}
           >
             {headerButton.name}
           </HeaderButton>
