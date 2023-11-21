@@ -2,7 +2,7 @@ import "./App.css";
 import tw from "tailwind-styled-components";
 import React, { useState } from "react";
 import Main from "./main/Main";
-import Header from "./components/header/Header";
+import Header from "./header/Header";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Stack from "./pages/Stack";
