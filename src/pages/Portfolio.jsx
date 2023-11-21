@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const Project = ({ Button, TitleText }) => {
   const projectList = [
     {
-      img: "https://yebinyun.github.io/Portfolio/" + "/img/삐삐.webp",
+      img: "https://yebinyun.github.io/portfolio/" + "/img/삐삐.webp",
       title: "인테리어 추천 커뮤니티 웹사이트",
       gitHub: "https://github.com/YebinYun/seb45_main_027",
       link: "",
@@ -11,7 +11,7 @@ const Project = ({ Button, TitleText }) => {
       style: "cursor-not-allowed",
     },
     {
-      img: "https://yebinyun.github.io/Portfolio/" + "/img/빈진우.gif",
+      img: "https://yebinyun.github.io/portfolio/" + "/img/빈진우.gif",
       title: "운동 기록 Exercise Tracker",
       gitHub: "https://github.com/YebinYun/exercise-tracker-app",
       link: "https://dpftlel21.github.io/exercise-tracker-app/",
@@ -19,14 +19,14 @@ const Project = ({ Button, TitleText }) => {
     },
     {
       img:
-        "https://yebinyun.github.io/Portfolio/" + "/img/오늘뭐먹지.질문지.gif",
+        "https://yebinyun.github.io/portfolio/" + "/img/오늘뭐먹지.질문지.gif",
       title: "메뉴 추천 웹 사이트 ver.질문지",
       gitHub: "https://github.com/YebinYun/what-eat-today",
       link: "https://yebinyun.github.io/what-eat-today/",
       linkMsg: "사이트 보러가기",
     },
     {
-      img: "https://yebinyun.github.io/Portfolio/" + "/img/오늘뭐먹지.룰렛.png",
+      img: "https://yebinyun.github.io/portfolio/" + "/img/오늘뭐먹지.룰렛.png",
       title: "메뉴 추천 웹 사이트 ver.룰렛",
       gitHub: "https://github.com/YebinYun/lunch-recomandation",
       link: "https://yebinyun.github.io/lunch-recomandation/",
@@ -37,9 +37,7 @@ const Project = ({ Button, TitleText }) => {
   return (
     <div className=" relative top-40">
       <div className="flex justify-center my-20">
-        <TitleText>
-          Project List
-        </TitleText>
+        <TitleText>Project List</TitleText>
       </div>
 
       <div>
@@ -59,7 +57,8 @@ const Project = ({ Button, TitleText }) => {
                   프로젝트 설명
                 </Button>
                 <Button
-                  onClick={() => list.link && window.open(list.link, "_blank")}>
+                  onClick={() => list.link && window.open(list.link, "_blank")}
+                >
                   {list.linkMsg}
                 </Button>
               </div>

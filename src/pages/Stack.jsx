@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
 import { Icon } from "@iconify/react";
-import MouseWheel from '../components/button/MouseWheel';
 
 const wrapStyle = "p-8 rounded-md opacity-80 shadow-lg border-2 border-red-100";
-const h1Style = "w-full text-4xl font-extrabold text-gray-900 text-shadow-custom";
+const h1Style =
+  "w-full text-4xl font-extrabold text-gray-900 text-shadow-custom";
 const divStyle =
   "hidden lg:flex w-full border-2 border-red-200 my-8 opacity-50 rounded-full shadow";
 const ulStyle = "flex w-full mt-6 lg:mt-0 lg:mb-8";
 const iconStyle = "w-8 h-8 mr-2.5";
 const spanStyle = "text-2xl font-semibold text-black text-shadow-custom";
-
 
 const skills = {
   Language: [
@@ -18,9 +17,7 @@ const skills = {
     { icon: "skill-icons:html", name: "HTML" },
     { icon: "skill-icons:css", name: "CSS" },
   ],
-  Framework: [
-    { icon: "logos:react", name: "React" },
-  ],
+  Framework: [{ icon: "logos:react", name: "React" }],
   Styling: [
     { icon: "devicon:tailwindcss", name: "Tailwind" },
     { icon: "skill-icons:styledcomponents", name: "StyledComponents" },
@@ -28,8 +25,8 @@ const skills = {
     { icon: "devicon:storybook", name: "Storybook" },
   ],
 };
-  
-const Stack = ({ nextClick }) => {
+
+const Stack = () => {
   return (
     <div mainclassName="h-screen" divclassName="h-full w-full">
       <div className="w-full mt-96 md:mt-[400px] lg:mt-0">
@@ -56,7 +53,6 @@ const Stack = ({ nextClick }) => {
             </div>
           ))}
         </div>
-        <MouseWheel onClick={nextClick} />
       </div>
     </div>
   );
