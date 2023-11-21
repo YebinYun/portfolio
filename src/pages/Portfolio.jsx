@@ -28,7 +28,7 @@ const Project = ({ Button, TitleText }) => {
     },
   ];
   return (
-    <div className="h-[60vh] lg:h-[60vh] w-[80vw] flex flex-col">
+    <div className="h-[60vh] w-[80vw] flex flex-col">
       <TitleText>Project List</TitleText>
       <div className="flex flex-col lg:flex-row py-8 ">
         {projectList.map((list, idx) => (

@@ -10,14 +10,9 @@ const Wrap = tw.div`
   border-2 
   border-red-100
 `;
-const H1 = tw.h1`
+const H2 = tw.h2`
   font-extrabold 
   text-shadow-custom 
-  text-6xl 
-  mb-4 
-  text-red-300
-`;
-const H2 = tw(H1)`
   text-4xl  
   text-gray-900 
 `;
@@ -54,7 +49,6 @@ const Span = tw.span`
   text-shadow-custom
 `;
 const iconStyle = "w-8 h-8 mr-2.5";
-
 const skills = {
   Language: [
     { icon: "skill-icons:javascript", name: "JavaScript" },
@@ -70,13 +64,10 @@ const skills = {
     { icon: "devicon:figma", name: "Figma" },
   ],
 };
-
-const Stack = () => {
+const Stack = ({ TitleText }) => {
   return (
-    <div className="w-full mt-96 md:mt-[400px] lg:mt-0">
-      <div className="flex justify-center mb-20">
-        <H1>Stack</H1>
-      </div>
+    <div className="h-[60vh] w-[80vw] flex flex-col">
+      <TitleText>Stack</TitleText>
       <div className="w-full grid grid-rows-3 gap-10 2xl:grid-cols-3 2xl:grid-rows-none ">
         {Object.keys(skills).map((category, index) => (
           <Wrap key={index}>
