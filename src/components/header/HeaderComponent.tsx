@@ -43,6 +43,7 @@ const HeaderComponent = ({
 export default HeaderComponent;
 
 const HeaderButtonGroup = styled(ToggleButtonGroup)({
+  position:"absolute",
   width: "100vw",
   height: "50px",
   background: "#D46C4F",
