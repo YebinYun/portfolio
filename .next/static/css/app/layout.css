@@ -1,0 +1,167 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./node_modules/tailwindcss/base.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+@tailwind base;
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./node_modules/tailwindcss/components.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+@tailwind components;
+
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./node_modules/tailwindcss/utilities.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+@tailwind utilities;
+
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/app/layout.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/* reset */
+html {
+  font-size: 12px;
+  line-height: 1.2;
+  background: none repeat scroll 0 0 #fff;
+  position: relative;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+body,
+div,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+form,
+fieldset,
+blockquote,
+address,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+td,
+caption {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+* {
+  margin-bottom: -1px;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/* 버튼 호버 효과 */
+.buttonHover {
+  position: relative;
+  background: white;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  margin: 0 20px;
+}
+.buttonHover:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #02801d5e;
+  transition: all 0.5s ease;
+}
+.buttonHover:hover {
+  color: #fff;
+}
+.buttonHover:hover:after {
+  left: 0;
+  width: 100%;
+}
+.buttonHover:active {
+  top: 2px;
+}
+
+/* 그림자 효과 */
+.shadowStyle{
+  border-radius: 5px;
+   box-shadow:inset 1px 1px 1px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+}
+.shadowStyle:after{
+  border-radius: 5px;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+/* 화살표 버튼 에니메이션 */
+@keyframes arrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+.animate-arrow {
+  animation: arrow 1.0s linear;
+  animation-iteration-count: infinite;
+}
+
+/* 글자 색상 변경  4가지 색상이라 4등분 */
+@keyframes color-animation {
+  0%    {color:#e04b4e }
+  24%   {color:#e04b4e }
+  25%   {color:#eeab54}
+  49%   {color:#eeab54}
+  50%   {color:#87bb2c}
+  74%   {color:#87bb2c}
+  75%   {color:#33a5ad}
+  99%   {color:#33a5ad}
+}
+.title-word {
+  animation: color-animation 8s linear infinite;
+}
+
+/* CSS 코드 */
+.underline-bg {
+  position: absolute;
+  bottom: -2px; /* 밑줄 숨기기 */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+

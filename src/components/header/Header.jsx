@@ -4,6 +4,7 @@ import tw from "tailwind-styled-components";
 
 const Header = ({ setSection, sections, Button }) => {
   const HeaderButton = tw(Button)`
+    background:#D46C4F
     mt-4 
     md:mt-8 
     lg:mt-6 
