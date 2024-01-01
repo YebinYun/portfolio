@@ -1,15 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import Home from "../pages/Home";
 import Portfolio from "../pages/Portfolio";
 import Stack from "../pages/Stack";
-import Header from "../components/header/Header";
 import Main from "../components/main/Main";
-import { Box } from "@mui/material";
+import Header from "../container/header/HeaderContainer";
 
-export default function Page() {
+interface Section {
+  name: string;
+  component: ReactElement;
+}
 
-  const sections = [
+export default function Page(): ReactElement {
+  const sections: Section[] = [
     {
       name: "Home",
       component: <Home />,
@@ -28,12 +31,14 @@ export default function Page() {
     },
   ];
 
-  const [isSection, setIsSection] = useState(sections[0].component);
+  const [isSection, setIsSection] = useState<ReactElement>(
+    sections[0].component
+  );
 
   return (
-    <Box>
+    <>
       <Header setSection={setIsSection} sections={sections} />
       <Main isSection={isSection} />
-    </Box>
+    </>
   );
 }
