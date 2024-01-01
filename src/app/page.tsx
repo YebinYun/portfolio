@@ -37,7 +37,13 @@ export default function Page(): ReactElement {
   );
 
   return (
-    <Box sx={{ position: "relative", height: "100vh", width: "100vw" }}>
+    <Box
+      sx={{
+        position: "relative",
+        height: "100vh",
+        width: "100vw",
+        background: "#FBF6F3",
+      }}>
       <Header setSection={setIsSection} sections={sections} />
       <Main isSection={isSection} />
     </Box>
