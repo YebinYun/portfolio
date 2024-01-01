@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import { Button } from "@mui/material";
 
 const textStyle = "font-semibold ml-4 text-xl text-gray-700 hidden md:block";
 const buttonsData = [
@@ -15,7 +16,7 @@ const buttonsData = [
   },
 ];
 
-const ButtonWrap = ({ Button }) => {
+const ButtonWrap = () => {
   return (
     <div className="flex items-center justify-center mt-20">
       {buttonsData.map((button, index) => (

@@ -1,40 +1,48 @@
-import React from "react";
-import { useState } from "react";
-import tw from "tailwind-styled-components";
+import { ToggleButton, ToggleButtonGroup, styled } from "@mui/material";
+import React, { useState } from "react";
+ 
+const Header = ({ setSection, sections }) => {
+  const [activeButton, setActiveButton] = useState(sections[0].name);
 
-const Header = ({ setSection, sections, Button }) => {
-  const HeaderButton = tw(Button)`
-    background:#D46C4F
-    mt-4 
-    md:mt-8 
-    lg:mt-6 
-    mx-2.5 
-    md:mx-8 
-    lg:mx-12 
-    px-8 
-    hover:text-white
-  `;
+  const HeaderButtonGroup = styled(ToggleButtonGroup)({
+    width: "100vw",
+    height: "50px",
+    background: "#D46C4F",
+    borderBottom: "3px solid #274D5A",
+    borderRadius: "0px",
+    padding: "0 100px 0 80px"
+  })
 
-  const action = " text-white bg-red-300 border-red-300 shadow-inner underline";
-  const [isActive, setIsActive] = useState({ 0: true });
+  const HeaderButton = styled(ToggleButton)({
+    height: "100%",
+    color: "#FFF",
+    fontSize: "18px",
+    fontWeight: "900",
+    border: "none",
+    WebkitTextStroke: "1px #444",
+    padding: "0 20px",
+    "&.Mui-selected": {
+      color: "#FAAC6A",
+      background: "#D46C4F",
+    },
+  });
 
   return (
-    <header className="w-full pt-5">
-      <nav className="w-full text-2xl font-bold flex justify-center text-gray-800 my-2">
-        {sections.map((headerButton, idx) => (
-          <HeaderButton
-            className={isActive[idx] && `${action}`}
-            key={headerButton.name}
-            onClick={() => {
-              setSection(headerButton.component);
-              setIsActive((pre) => ({ [idx]: !pre[idx] }));
-            }}
-          >
-            {headerButton.name}
-          </HeaderButton>
-        ))}
-      </nav>
-    </header>
+    <HeaderButtonGroup
+      value={activeButton}
+      exclusive
+      onChange={(event, newActiveButton) => {
+        setActiveButton(newActiveButton);
+        setSection(
+          sections.find((button) => button.name === newActiveButton).component
+        );
+      }}>
+      {sections.map((headerButton) => (
+        <HeaderButton value={headerButton.name}>
+          {headerButton.name}
+        </HeaderButton>
+      ))}
+    </HeaderButtonGroup>
   );
 };
 

@@ -1,6 +1,7 @@
+import { Box, Button } from "@mui/material";
 import React from "react";
 
-const Project = ({ Button, TitleText }) => {
+const Project = () => {
   const projectList = [
     {
       img: "삐삐.webp",
@@ -29,7 +30,7 @@ const Project = ({ Button, TitleText }) => {
   ];
   return (
     <div className="h-[60vh] w-[80vw] flex flex-col">
-      <TitleText>Project List</TitleText>
+      <Box>Project List</Box>
       <div className="flex flex-col lg:flex-row py-8 ">
         {projectList.map((list, idx) => (
           <nav key={idx} className="flex flex-col my-10 lg:my-0 lg:mx-10">

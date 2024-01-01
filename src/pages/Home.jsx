@@ -1,14 +1,15 @@
 import React from 'react';
 import ButtonWrap from '../components/button/ButtonWrap';
+import { Box } from '@mui/material';
 
-const Home = ({ Button, TitleText }) => {
+const Home = () => {
   return (
     <div>
       <div className="w-[70vw] flex flex-col items-center text-shadow-custom mt-20">
         <div className="flex flex-col items-center">
-          <TitleText>
+          <Box>
             Frontend Developer
-          </TitleText>
+          </Box>
           <p className="max-w-5xl font-medium text-[1rem] md:text-[1.5rem] mt-5 mx-2 text-center text-white ">
             프로그램의 시각적 표현에 개입하여 즉시 처리하는 점이 저의 적극적인
             성향과 잘 어우러집니다. 적극적이고 협력적인 성향으로, 팀 내에서의
@@ -23,7 +24,7 @@ const Home = ({ Button, TitleText }) => {
           방문해주셔서 감사합니다.
         </span>
       </div>
-      <ButtonWrap Button={Button} />
+      <ButtonWrap/>
     </div>
   );
 };

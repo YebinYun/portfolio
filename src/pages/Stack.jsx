@@ -1,6 +1,7 @@
 import React from "react";
 import tw from "tailwind-styled-components";
 import { Icon } from "@iconify/react";
+import { Box } from "@mui/material";
 
 const Wrap = tw.div`
   p-8 
@@ -64,10 +65,10 @@ const skills = {
     { icon: "devicon:figma", name: "Figma" },
   ],
 };
-const Stack = ({ TitleText }) => {
+const Stack = () => {
   return (
     <div className="h-[60vh] w-[80vw] flex flex-col">
-      <TitleText>Stack</TitleText>
+      <Box>Stack</Box>
       <div className="w-full grid grid-rows-3 gap-10 2xl:grid-cols-3 2xl:grid-rows-none ">
         {Object.keys(skills).map((category, index) => (
           <Wrap key={index}>
