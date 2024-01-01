@@ -1,7 +1,8 @@
 import React from 'react';
 import "animate.css";
 import { Box, Typography } from "@mui/material";
-import ButtonWrap from '../button/ButtonWrap';
+import SnsButton from '../../utils/SnsButton';
+import Skills from "../../utils/Skills";
 
 const Home = () => {
   const introText =
@@ -31,18 +32,29 @@ const Home = () => {
         />
       </Box>
 
-      <Typography
-        sx={{
-          whiteSpace: "pre-line",
-          textAlign: "center",
-          fontSize: "14px",
-          margin: "5rem 0",
-        }}>
-        {introText}
-      </Typography>
+      <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
+        <Typography
+          sx={{
+            whiteSpace: "pre-line",
+            width: "80%",
+            textAlign: "center",
+            fontSize: "14px",
+            margin: "5rem 0",
+            background: "#FBF6F3",
+            boxShadow: "5px 5px 10px 5px #eceae8",
+            borderRadius: "10px",
+            py: "2rem",
+          }}>
+          {introText}
+        </Typography>
+      </Box>
 
       <Box sx={{ textAlign: "center" }}>
-        <ButtonWrap />
+        <SnsButton />
+      </Box>
+
+      <Box sx={{ textAlign: "center" }}>
+        <Skills />
       </Box>
     </Box>
   );

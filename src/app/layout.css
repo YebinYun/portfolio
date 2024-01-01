@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;700;900&display=swap');
 
 /* reset */
 html {
@@ -63,6 +64,9 @@ a {
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: 'Balsamiq Sans', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+
 }
 
 /* 버튼 호버 효과 */

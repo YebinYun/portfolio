@@ -15,7 +15,7 @@ const buttonsData = [
   },
 ];
 
-const ButtonWrap = () => {
+const SnsButton = () => {
   return (
     <Box>
       {buttonsData.map((button, index) => (
@@ -23,9 +23,9 @@ const ButtonWrap = () => {
           key={index}
           sx={{
             color: "#444",
-            fontSize: "20px",
+            fontSize: "18px",
             mx: "2rem",
-            padding: "1rem 2rem",
+            padding: "0.5rem 1rem",
             boxShadow: "5px 5px 10px lightgray;",
           }}
           onClick={() => window.open(button.link, "_blank")}>
@@ -33,7 +33,7 @@ const ButtonWrap = () => {
             <Icon icon={button.icon} />
           </Box>
           <Typography
-            sx={{ fontWeight: 600, fontSize: "15px", marginLeft: "0.5rem" }}>
+            sx={{ fontWeight: "bold", fontSize: "12px", marginLeft: "0.5rem" }}>
             {button.text}
           </Typography>
         </Button>
@@ -42,4 +42,4 @@ const ButtonWrap = () => {
   );
 };
 
-export default ButtonWrap;
+export default SnsButton;
